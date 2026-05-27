@@ -12,20 +12,18 @@ from supabase import create_client, Client
 from postgrest.exceptions import APIError
 from datetime import date
 import httpx
+from agent import build_graph
 
 
 # Load env
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# dotenv_path = os.path.join(current_dir, ".env")
-# load_dotenv(dotenv_path)
 load_dotenv()
+
 
 SUPABASE_URL = os.getenv("SUPABASE_URL", "https://dolrgcazdbvnyknstiso.supabase.co")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY", os.getenv("SUPABASE_KEY", ""))
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-from agent import build_graph
 
 # App
 app = FastAPI(
