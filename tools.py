@@ -10,8 +10,6 @@ from langchain_tavily import TavilySearch
 from bs4 import BeautifulSoup
 
 # Load env
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# load_dotenv(os.path.join(current_dir, ".env"))
 load_dotenv()
 
 TAVILY_API_KEY       = os.getenv("TAVILY_API_KEY")

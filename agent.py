@@ -22,8 +22,6 @@ from tools import (
 )
 
 # Load env
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# load_dotenv(os.path.join(current_dir, ".env"))
 load_dotenv()
 
 GROQ_API_KEY     = os.getenv("GROQ_API_KEY", "")
